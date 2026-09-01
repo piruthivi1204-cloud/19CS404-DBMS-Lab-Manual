@@ -104,124 +104,171 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+
+![image](https://github.com/user-attachments/assets/942d6a0b-7606-402b-8f11-44f10198b37d)
 
 ```sql
--- Paste your SQL code below for Question 1
-```
+CREATE TABLE Bonuses(
+BonusID INT PRIMARY KEY,
+EmployeeID INT,
+BonusAmount REAL CHECK(BonusAmount>0),
+BonusDate DATE,
+Reason TEXT NOT NULL
+);
 
+```
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/ea63e41a-09d4-4288-b139-43ea519825ed)
+
 
 **Question 2**
----
--- Paste Question 2 here
+
+![image](https://github.com/user-attachments/assets/560ebfe7-6a54-41b1-a177-84d9a5353047)
 
 ```sql
--- Paste your SQL code below for Question 2
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(101,'Laptop','Electronics',1500,50);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/c341e460-a000-4de8-8a82-fdd131941394)
+
 
 **Question 3**
----
--- Paste Question 3 here
+
+![image](https://github.com/user-attachments/assets/7078b380-4e06-425d-8f7c-1471402da45d)
+
+
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE item(
+item_id TEXT PRIMARY KEY,
+item_desc TEXT NOT NULL,
+rate INT NOT NULL,
+icom_id TEXT(4),
+FOREIGN KEY (icom_id) REFERENCES company(com_id)
+ON UPDATE CASCADE
+ON DELETE CASCADE
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/d9a11b44-58b4-4218-8148-f08af352f7c4)
+
 
 **Question 4**
----
--- Paste Question 4 here
+
+![image](https://github.com/user-attachments/assets/d901433e-5f0c-4ef6-ba8f-37000fd2dde5)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+CREATE TABLE ProjectAssignments(
+AssignmentID INT PRIMARY KEY,
+EmployeeID INT,
+ProjectID INT,
+AssignmentDate DATE NOT NULL,
+FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID)
+);
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/7dc2bdd2-ad69-4dbe-9114-0626ef3c0db1)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![image](https://github.com/user-attachments/assets/52b89195-caf0-4ae9-a86f-68b5c64e1e4c)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+INSERT INTO Books(ISBN,Title,Author,Publisher,YearPublished)
+SELECT  ISBN, Title, Author, Publisher, YearPublished
+FROM  Out_of_print_books;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/22d0beef-7ccb-4f8a-8b2c-dc4afea77986)
 
 **Question 6**
----
--- Paste Question 6 here
+
+![image](https://github.com/user-attachments/assets/52060e56-080f-468c-b8de-a8312006f748)
 
 ```sql
--- Paste your SQL code below for Question 6
+CREATE TABLE Events(
+EventID INTEGER,
+EventName TEXT,
+EventDate DATE
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/b22c3171-def9-4d72-97fc-140a0daa0dee)
 
 **Question 7**
----
--- Paste Question 7 here
+
+![image](https://github.com/user-attachments/assets/4ddf8d63-e95b-4542-bead-dee188ba99b1)
 
 ```sql
--- Paste your SQL code below for Question 7
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(106,'Fitness Tracker','Wearables',NULL,NULL);
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(107,'Laptop','Electronics',999.99,50);
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(108,'Wireless Earbuds','Accessories',NULL,100);
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/591defed-3658-4976-a479-3704104d7909)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/db29c91b-9692-462e-ac58-ad7c8a035391)
 
 ```sql
--- Paste your SQL code below for Question 8
+ALTER TABLE Companies ADD COLUMN designation varchar(50);
+ALTER TABLE Companies ADD COLUMN net_salary number;
+ALTER TABLE Companies ADD COLUMN dob date;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/36f6e886-cdbc-40c1-937c-7d2559a0e7b3)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/04c55e88-d808-4cce-9f43-0a4b2daa2943)
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE jobs(
+job_id INT,
+job_title TEXT DEFAULT '',
+min_salary INT DEFAULT 8000,
+max_salary INT DEFAULT NULL);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/4d67b31f-2b95-4c12-add8-b3054eb0448f)
 
 **Question 10**
----
--- Paste Question 10 here
+
+![image](https://github.com/user-attachments/assets/baedcb9b-7706-43c1-afd3-a0ca26f7c903)
 
 ```sql
--- Paste your SQL code below for Question 10
+ALTER TABLE Student_details ADD COLUMN Email VARCHAR(50);
+ALTER TABLE Student_details ADD COLUMN MARKS INT DEFAULT 0;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/e2dcd365-c733-4639-9d0d-e9db05b3eda1)
 
 
 ## RESULT
