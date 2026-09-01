@@ -46,124 +46,138 @@ Used to retrieve records from a table.
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
---
--- Paste Question 1 here
+
+![image](https://github.com/user-attachments/assets/27a2402a-b3f1-4d37-aea8-9cdcab8104f4)
 
 ```sql
--- Paste your SQL code below for Question 1
+UPDATE Products
+SET sell_price =sell_price*1.10
+WHERE category='Bakery'
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/6046fbd6-d8c4-42dd-a28d-c3a1e4845390)
 
 **Question 2**
----
--- Paste Question 2 here
+
+![image](https://github.com/user-attachments/assets/7d87e11d-78b1-4519-92ce-d21ca723ff69)
 
 ```sql
--- Paste your SQL code below for Question 2
+UPDATE PRODUCTS
+SET reorder_lvl = reorder_lvl* 0.7
+WHERE product_name LIKE '%cream%' AND quantity>reorder_lvl
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/56e21be8-4272-472d-add1-99beee9214ec)
 
 **Question 3**
----
--- Paste Question 3 here
+
+![image](https://github.com/user-attachments/assets/0ff8a38d-c2ce-4163-9614-58f51623d340)
 
 ```sql
--- Paste your SQL code below for Question 3
+UPDATE products
+SET availability=availability*2
+WHERE  product_id = 1
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/a2a7e014-d957-4cce-98e9-2ec9f9dae3dc)
 
 **Question 4**
----
--- Paste Question 4 here
+
+![image](https://github.com/user-attachments/assets/9c9ebea3-7931-4357-bb78-3cf2e003bb33)
 
 ```sql
--- Paste your SQL code below for Question 4
+UPDATE Employees
+SET salary=8000
+WHERE employee_id=105
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/3294f976-b436-43d9-a26d-edc7217a106b)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![image](https://github.com/user-attachments/assets/1c9459c5-1ca9-4dc3-9c1a-27ca47a551f7)
 
 ```sql
--- Paste your SQL code below for Question 5
+DELETE FROM customer
+WHERE GRADE != 3
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/46e42085-4299-4065-9714-872a9a648f64)
 
 **Question 6**
----
--- Paste Question 6 here
+
+![image](https://github.com/user-attachments/assets/12deeb76-bd5c-47f4-85cf-bc0bc55d22da)
 
 ```sql
--- Paste your SQL code below for Question 6
+DELETE FROM Doctors 
+WHERE last_name IS NULL
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/208071c2-42ab-4e4e-8299-3eb766aa144e)
 
 **Question 7**
----
--- Paste Question 7 here
+
+![image](https://github.com/user-attachments/assets/4af5cc53-bee9-4de5-8d0c-80c40a08d3ce)
 
 ```sql
--- Paste your SQL code below for Question 7
+DELETE FROM customer 
+WHERE CUST_COUNTRY NOT IN ('India', 'USA')
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/8adb8591-6f30-41f3-afd8-e302a2591a27)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/0d916e13-889b-4d70-9a24-4e7b1e9ebcba)
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT * FROM EmployeePosition
+ORDER BY SALARY DESC LIMIT 3
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/0de0461d-1a42-4852-a93f-8de83ac1d407)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/e776eef3-049f-4210-9b58-3b10d713a5e2)
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT patient_id,first_name,admission_date,discharge_date FROM Patients
+WHERE admission_date =  discharge_date
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/ab0de0da-30d1-45c1-84c7-9bab11ea1d25)
 
 **Question 10**
----
--- Paste Question 10 here
+
+![image](https://github.com/user-attachments/assets/45ac9bc3-d6ec-4394-ac29-1d5d5f431630)
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT * FROM orders
+WHERE purch_amt BETWEEN 500 AND 4000 AND purch_amt NOT IN (948.50,1983.43)
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/b1b5742d-a4e5-4a41-af39-6b53c4e1ffb9)
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
